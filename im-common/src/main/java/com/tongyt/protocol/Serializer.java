@@ -1,13 +1,8 @@
 package com.tongyt.protocol;
 
 import com.google.gson.Gson;
-import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream;
 import lombok.extern.slf4j.Slf4j;
-
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.nio.charset.StandardCharsets;
 
 /**
@@ -40,7 +35,7 @@ public interface Serializer {
             @Override
             public <T> byte[] serialize(T object) {
                 try {
-                    ByteOutputStream bos = new ByteOutputStream();
+                    ByteArrayOutputStream bos = new ByteArrayOutputStream();
                     ObjectOutputStream oos = new ObjectOutputStream(bos);
                     oos.writeObject(object);
                     return bos.toByteArray();

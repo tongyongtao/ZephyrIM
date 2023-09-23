@@ -32,10 +32,10 @@ public class ChannelHandlerInitializer extends ChannelInitializer<SocketChannel>
     protected void initChannel(SocketChannel ch) throws Exception {
 
         ch.pipeline().addLast(new ProtocolFrameDecoder());
-        //ch.pipeline().addLast(LOGGING_HANDLER);
+        ch.pipeline().addLast(LOGGING_HANDLER);
         ch.pipeline().addLast(MESSAGE_CODEC_SHARABLE);
         // 防客户端假死，5s 内如果没有接收到客户端的消息，会触发
-        ch.pipeline().addLast(new IdleStateHandler(5, 0, 0));
+        //ch.pipeline().addLast(new IdleStateHandler(5, 0, 0));
         ch.pipeline().addLast(HEARTBEAT_HANDLER);
         ch.pipeline().addLast(LOGIN_HANDLER);
         ch.pipeline().addLast(CHAT_REQUEST_HANDLER);
