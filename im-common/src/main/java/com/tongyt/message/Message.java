@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Data
-public abstract class Message implements Serializable {
+public class Message implements Serializable {
 
     private static final Map<Integer, Class<? extends Message>> messageClasses = new HashMap<>();
 
@@ -15,7 +15,9 @@ public abstract class Message implements Serializable {
 
     private int messageType;
 
-    public abstract int getMessageType();
+    public int getMessageType() {
+        return messageType;
+    }
 
     /**
      * 根据消息类型字节，获得对应的消息 class
