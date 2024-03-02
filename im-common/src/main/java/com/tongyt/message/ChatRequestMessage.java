@@ -6,9 +6,23 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public class ChatRequestMessage extends Message {
+
+    /**
+     * 消息内容
+     */
     private String content;
+
+    /**
+     * 消息接收用户
+     */
     private String to;
+
+    /**
+     * 消息发送用户
+     */
     private String from;
+
+
 
     public ChatRequestMessage() {
     }

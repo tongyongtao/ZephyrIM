@@ -6,8 +6,18 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public class LoginRequestMessage extends Message {
+
+    /**
+     * 用户名
+     */
     private String username;
+
+    /**
+     * 密码
+     */
     private String password;
+
+
 
     public LoginRequestMessage() {
     }

@@ -7,8 +7,16 @@ import lombok.ToString;
 @ToString(callSuper = true)
 public class ChatResponseMessage extends AbstractResponseMessage {
 
+    /**
+     * 消息发送用户
+     */
     private String from;
+
+    /**
+     * 消息内容
+     */
     private String content;
+
 
     public ChatResponseMessage(boolean success, String reason) {
         super(success, reason);

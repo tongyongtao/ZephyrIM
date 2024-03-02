@@ -6,8 +6,18 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public abstract class AbstractResponseMessage extends Message {
+
+    /**
+     * 请求处理状态
+     */
     private boolean success;
+
+    /**
+     * 错误信息
+     */
     private String reason;
+
+
 
     public AbstractResponseMessage() {
     }

@@ -6,7 +6,15 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public class GroupChatResponseMessage extends AbstractResponseMessage {
+
+    /**
+     * 消息发送用户
+     */
     private String from;
+
+    /**
+     * 消息内容
+     */
     private String content;
 
     public GroupChatResponseMessage(boolean success, String reason) {

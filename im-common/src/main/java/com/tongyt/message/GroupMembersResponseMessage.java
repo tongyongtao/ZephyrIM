@@ -9,6 +9,9 @@ import java.util.Set;
 @ToString(callSuper = true)
 public class GroupMembersResponseMessage extends Message {
 
+    /**
+     * 群成员
+     */
     private Set<String> members;
 
     public GroupMembersResponseMessage(Set<String> members) {

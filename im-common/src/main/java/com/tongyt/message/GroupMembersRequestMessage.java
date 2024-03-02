@@ -6,6 +6,10 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public class GroupMembersRequestMessage extends Message {
+
+    /**
+     * 群名称
+     */
     private String groupName;
 
     public GroupMembersRequestMessage(String groupName) {

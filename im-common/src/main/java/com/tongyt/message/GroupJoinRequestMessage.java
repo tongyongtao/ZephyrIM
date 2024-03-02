@@ -6,8 +6,15 @@ import lombok.ToString;
 @Data
 @ToString(callSuper = true)
 public class GroupJoinRequestMessage extends Message {
+
+    /**
+     * 群名称
+     */
     private String groupName;
 
+    /**
+     * 待加入用户
+     */
     private String username;
 
     public GroupJoinRequestMessage(String username, String groupName) {
