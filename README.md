@@ -5,7 +5,7 @@
 服务端目前是完全基于netty实现的，后续会进行扩展和重构
 
 ## 客户端
-客户端目前还是使用控制台展示，后续会使用Flutter开发客户端程序
+前端项目地址：https://github.com/findjh/easy-chat
 
 
 未完待续。。。。
